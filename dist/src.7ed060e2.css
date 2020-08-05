@@ -1,0 +1,22 @@
+.date-picker-enter {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+.date-picker-enter-active {
+  opacity: 1;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 161ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transform: translateY(0);
+}
+.date-picker-exit {
+  opacity: 1;
+}
+.date-picker-exit-active {
+  opacity: 0;
+  transform: translateY(-0.3rem);
+  transition: opacity 241ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 161ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+
+/*# sourceMappingURL=/src.7ed060e2.css.map */
