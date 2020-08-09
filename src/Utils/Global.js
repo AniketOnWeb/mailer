@@ -25,10 +25,7 @@ export default createGlobalStyle`
             --color-MoreBlack: ${(props) => props.theme.colors.MoreBlack};
             --color-boxGradient: ${(props) => props.theme.colors.boxGradient};
 
-            @media ${(props) => props.theme.MediaQueries.largest} {
-                 font-size: 60%;
-            }
-
+         
             @media ${(props) => props.theme.MediaQueries.large} {
                    font-size: 57.5%;
              }
@@ -37,6 +34,9 @@ export default createGlobalStyle`
                   font-size: 50%;
               }
 
+   @media ${(props) => props.theme.MediaQueries.largest} {
+                 font-size: 60%;
+            }
 
              scroll-behavior:smooth 
         }

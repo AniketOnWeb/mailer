@@ -3,8 +3,8 @@ import styled from "styled-components";
 import MainPopup from "./MainPopup";
 
 const OptionsContainer = styled.div`
-  width: 6rem;
-  height: 6rem;
+  width: 9rem;
+  height: 9rem;
   background-color: ${(props) => props.theme.colors.base};
   border-radius: 50%;
   cursor: pointer;

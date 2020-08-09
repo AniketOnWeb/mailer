@@ -26,6 +26,12 @@ const theme = {
     large: "only screen and (max-width: 80em)",
     larger: "only screen and (max-width: 90em)",
     largest: "only screen and (max-width: 97em)",
+    // smallest: `only screen and (max-width: 1080px)`,
+    // smaller: `only screen and (max-width: 1440px)`,
+    // small: "only screen and (max-width: 1280px)",
+    // medium: "only screen and (max-width: 1920px)",
+    // large: "only screen and (max-width: 2560px)",
+    // largest: "only screen and (max-width: 3840px)",
   },
 };
 

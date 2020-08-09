@@ -36667,7 +36667,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 35rem;\n  height: 35rem;\n  background-color: ", ";\n  position: absolute;\n  bottom: 11.5rem;\n  right: 4.5rem;\n  border-radius: 0.9rem;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.6rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 45rem;\n  height: 45rem;\n  background-color: ", ";\n  position: absolute;\n  bottom: 14.5rem;\n  right: 4.5rem;\n  border-radius: 0.9rem;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.6rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36759,7 +36759,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 6rem;\n  height: 6rem;\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  position: absolute;\n  bottom: 3.5rem;\n  right: 4.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 9rem;\n  height: 9rem;\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  position: absolute;\n  bottom: 3.5rem;\n  right: 4.5rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36933,7 +36933,13 @@ var theme = {
     medium: "only screen and (max-width: 56.25em)",
     large: "only screen and (max-width: 80em)",
     larger: "only screen and (max-width: 90em)",
-    largest: "only screen and (max-width: 97em)"
+    largest: "only screen and (max-width: 97em)" // smallest: `only screen and (max-width: 1080px)`,
+    // smaller: `only screen and (max-width: 1440px)`,
+    // small: "only screen and (max-width: 1280px)",
+    // medium: "only screen and (max-width: 1920px)",
+    // large: "only screen and (max-width: 2560px)",
+    // largest: "only screen and (max-width: 3840px)",
+
   }
 };
 var _default = theme;
@@ -36949,7 +36955,7 @@ exports.default = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    *,\n    *::after,\n    *::before{\n        margin:0;\n        padding:0;\n        -webkit-font-smoothing: antiliased;\n        -moz-osx-font-smoothing: grayscale;\n        -webkit-tap-highlight-color: #1ABC9C !important;\n        }\n\n        html{\n            font-size: 62.5%;\n            box-sizing: border-box;\n            --color-main: ", ";\n            --color-secondary: ", ";\n            --color-text: ", ";\n            --color-white: ", ";\n            --color-shadow: ", ";\n            --color-blackMatte: ", ";\n            --color-blackMatteAlt: ", ";\n            --color-MoreBlack: ", ";\n            --color-boxGradient: ", ";\n\n            @media ", " {\n                 font-size: 60%;\n            }\n\n            @media ", " {\n                   font-size: 57.5%;\n             }\n     \n             @media ", " {\n                  font-size: 50%;\n              }\n\n\n             scroll-behavior:smooth \n        }\n\n        body{\n            font-family: 'Poppins', sans-serif;\n            line-height : 1.6;\n            overflow-x:hidden;\n         }\n\n        button ,a , input, textarea{\n            outline : none;\n            text-decoration: none; \n            font-family : inherit;\n        }   \n\n"]);
+  var data = _taggedTemplateLiteral(["\n    *,\n    *::after,\n    *::before{\n        margin:0;\n        padding:0;\n        -webkit-font-smoothing: antiliased;\n        -moz-osx-font-smoothing: grayscale;\n        -webkit-tap-highlight-color: #1ABC9C !important;\n        }\n\n        html{\n            font-size: 62.5%;\n            box-sizing: border-box;\n            --color-main: ", ";\n            --color-secondary: ", ";\n            --color-text: ", ";\n            --color-white: ", ";\n            --color-shadow: ", ";\n            --color-blackMatte: ", ";\n            --color-blackMatteAlt: ", ";\n            --color-MoreBlack: ", ";\n            --color-boxGradient: ", ";\n\n         \n            @media ", " {\n                   font-size: 57.5%;\n             }\n     \n             @media ", " {\n                  font-size: 50%;\n              }\n\n   @media ", " {\n                 font-size: 60%;\n            }\n\n             scroll-behavior:smooth \n        }\n\n        body{\n            font-family: 'Poppins', sans-serif;\n            line-height : 1.6;\n            overflow-x:hidden;\n         }\n\n        button ,a , input, textarea{\n            outline : none;\n            text-decoration: none; \n            font-family : inherit;\n        }   \n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36979,11 +36985,11 @@ var _default = (0, _styledComponents.createGlobalStyle)(_templateObject(), funct
 }, function (props) {
   return props.theme.colors.boxGradient;
 }, function (props) {
-  return props.theme.MediaQueries.largest;
-}, function (props) {
   return props.theme.MediaQueries.large;
 }, function (props) {
   return props.theme.MediaQueries.small;
+}, function (props) {
+  return props.theme.MediaQueries.largest;
 });
 
 exports.default = _default;
@@ -37038,7 +37044,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45369" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49391" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

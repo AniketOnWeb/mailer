@@ -4,11 +4,11 @@ import { CSSTransition } from "react-transition-group";
 import { useSpring, animated } from "react-spring";
 
 const ParentContainer = styled.div`
-  width: 35rem;
-  height: 35rem;
+  width: 45rem;
+  height: 45rem;
   background-color: ${(props) => props.theme.colors.base};
   position: absolute;
-  bottom: 11.5rem;
+  bottom: 14.5rem;
   right: 4.5rem;
   border-radius: 0.9rem;
   box-sizing: border-box;
