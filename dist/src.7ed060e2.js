@@ -36647,7 +36647,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 2.4rem;\n  font-weight: 500;\n  line-height: 1.6rem;\n  color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 35px;\n  font-weight: 500;\n  line-height: normal;\n  color: ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36657,7 +36657,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 6rem;\n  background-color: #393e46;\n  border-radius: 0.4rem;\n  cursor: pointer;\n  transition: 0.2s all ease-in-out;\n\n  &:active {\n    transform: scale(0.96);\n    box-shadow: inset 0 0 20px 4px #d65a311a;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 80px;\n  background-color: #393e46;\n  border-radius: 7px;\n  cursor: pointer;\n  transition: 0.2s all ease-in-out;\n\n  &:active {\n    transform: scale(0.96);\n    box-shadow: inset 0 0 20px 4px #d65a311a;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36667,7 +36667,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 45rem;\n  height: 45rem;\n  background-color: ", ";\n  position: absolute;\n  bottom: 14.5rem;\n  right: 4.5rem;\n  border-radius: 0.9rem;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.6rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 460px;\n  height: 450px;\n  background-color: ", ";\n  position: absolute;\n  bottom: 170px;\n  right: 70px;\n  border-radius: 15px;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 20px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36713,17 +36713,17 @@ var MainPopup = function MainPopup(_ref) {
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      marginTop: "4rem"
+      marginTop: "25px"
     }
   }, optionsList.map(function (item, i) {
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Options, {
       style: {
-        marginBottom: "1.2rem"
+        marginBottom: "15px"
       }
     }, item.name));
   })), _react.default.createElement("div", {
     style: {
-      marginTop: "3.4rem"
+      marginTop: "2px"
     }
   }, _react.default.createElement(SubTypography, null, "Created by Aniket"))));
 };
@@ -36759,7 +36759,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 9rem;\n  height: 9rem;\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  position: absolute;\n  bottom: 3.5rem;\n  right: 4.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100px;\n  height: 100px;\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  position: absolute;\n  bottom: 40px;\n  right: 70px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36780,7 +36780,6 @@ var Container = function Container() {
       open = _useState2[0],
       setopen = _useState2[1];
 
-  console.log(open);
   return _react.default.createElement("div", null, _react.default.createElement(OptionsContainer, {
     onClick: function onClick() {
       return setopen(!open);
@@ -36942,7 +36941,66 @@ var theme = {
 
   }
 };
-var _default = theme;
+var _default = theme; // import { createMuiTheme } from "@material-ui/core/styles";
+// const colorPreset = {
+//   base: "#222831",
+//   highEmphasis: "#e6e6e6",
+//   mediumEmphasis: "#999999",
+//   lowEmphasis: "#666666",
+//   elevation: "rgba(255, 255, 255, 0)",
+//   elavationLess: "rgba(255, 255, 255, 0.2)",
+//   elevation0: "rgba(255, 255, 255, 0.03)",
+//   elevation1: "rgba(255, 255, 255, 0.06)",
+//   elevation2: "rgba(255, 255, 255, 0.12)",
+//   elevation3: "rgba(255, 255, 255, 0.18)",
+//   elevation4: "rgba(255, 255, 255, 0.24)",
+// };
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: "Poppins",
+//   },
+//   breakpoints: {
+//     values: {
+//       xs: 1080,
+//       sm: 1280,
+//       sd: 1440,
+//       MacScaled: 1680,
+//       md: 1920,
+//       lg: 2560,
+//       xl: 3840,
+//     },
+//   },
+//   colorPreset: {
+//     base: colorPreset.base,
+//     highEmphasis: colorPreset.highEmphasis,
+//     mediumEmphasis: colorPreset.mediumEmphasis,
+//     lowEmphasis: colorPreset.lowEmphasis,
+//     elevation: colorPreset.elevation,
+//     elavationLess: colorPreset.elavationLess,
+//     elevation0: colorPreset.elevation0,
+//     elevation1: colorPreset.elevation1,
+//     elevation2: colorPreset.elevation2,
+//     elevation3: colorPreset.elevation3,
+//     elevation4: colorPreset.elevation4,
+//   },
+//   overrides: {
+//     MuiCssBaseline: {
+//       "@global": {
+//         "@font-face": "poppins",
+//         html: {
+//           fontSize: "10px",
+//           letterSpacing: "0",
+//         },
+//         body: {
+//           fontFamily: "poppins",
+//           letterSpacing: "0",
+//           fontSize: "unset",
+//         },
+//       },
+//     },
+//   },
+// });
+
 exports.default = _default;
 },{}],"../src/Utils/Global.js":[function(require,module,exports) {
 "use strict";
@@ -36955,7 +37013,7 @@ exports.default = void 0;
 var _styledComponents = require("styled-components");
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    *,\n    *::after,\n    *::before{\n        margin:0;\n        padding:0;\n        -webkit-font-smoothing: antiliased;\n        -moz-osx-font-smoothing: grayscale;\n        -webkit-tap-highlight-color: #1ABC9C !important;\n        }\n\n        html{\n            font-size: 62.5%;\n            box-sizing: border-box;\n            --color-main: ", ";\n            --color-secondary: ", ";\n            --color-text: ", ";\n            --color-white: ", ";\n            --color-shadow: ", ";\n            --color-blackMatte: ", ";\n            --color-blackMatteAlt: ", ";\n            --color-MoreBlack: ", ";\n            --color-boxGradient: ", ";\n\n         \n            @media ", " {\n                   font-size: 57.5%;\n             }\n     \n             @media ", " {\n                  font-size: 50%;\n              }\n\n   @media ", " {\n                 font-size: 60%;\n            }\n\n             scroll-behavior:smooth \n        }\n\n        body{\n            font-family: 'Poppins', sans-serif;\n            line-height : 1.6;\n            overflow-x:hidden;\n         }\n\n        button ,a , input, textarea{\n            outline : none;\n            text-decoration: none; \n            font-family : inherit;\n        }   \n\n"]);
+  var data = _taggedTemplateLiteral(["\n    *,\n    *::after,\n    *::before{\n        margin:0;\n        padding:0;\n        -webkit-font-smoothing: antiliased;\n        -moz-osx-font-smoothing: grayscale;\n        -webkit-tap-highlight-color: #1ABC9C !important;\n        }\n\n        html{\n            // font-size: 62.5%;\n            box-sizing: border-box;\n            --color-main: ", ";\n            --color-secondary: ", ";\n            --color-text: ", ";\n            --color-white: ", ";\n            --color-shadow: ", ";\n            --color-blackMatte: ", ";\n            --color-blackMatteAlt: ", ";\n            --color-MoreBlack: ", ";\n            --color-boxGradient: ", ";\n\n         \n//             @media ", " {\n//                    font-size: 57.5%;\n//              }\n     \n//              @media ", " {\n//                   font-size: 50%;\n//               }\n\n//    @media ", " {\n//                  font-size: 60%;\n//             }\n\n             scroll-behavior:smooth \n        }\n\n        body{\n            font-family: 'Poppins', sans-serif;\n            line-height : 1.6;\n            overflow-x:hidden;\n         }\n\n        button ,a , input, textarea{\n            outline : none;\n            text-decoration: none; \n            font-family : inherit;\n        }   \n\n"]);
 
   _templateObject = function _templateObject() {
     return data;

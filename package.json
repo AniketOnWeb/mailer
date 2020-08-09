@@ -22,6 +22,12 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
+    "@material-ui/pickers": "^3.2.8",
+    "@material-ui/styles": "^4.7.1",
+    "@types/react": "^16.9.45",
     "dotenv": "^6.2.0",
     "nodemailer": "^5.1.1",
     "nodemailer-mailgun-transport": "^1.4.0",

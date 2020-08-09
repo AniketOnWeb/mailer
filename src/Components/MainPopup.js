@@ -4,25 +4,25 @@ import { CSSTransition } from "react-transition-group";
 import { useSpring, animated } from "react-spring";
 
 const ParentContainer = styled.div`
-  width: 45rem;
-  height: 45rem;
+  width: 460px;
+  height: 450px;
   background-color: ${(props) => props.theme.colors.base};
   position: absolute;
-  bottom: 14.5rem;
-  right: 4.5rem;
-  border-radius: 0.9rem;
+  bottom: 170px;
+  right: 70px;
+  border-radius: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.6rem;
+  padding: 20px;
 `;
 
 const Options = styled.div`
   width: 100%;
-  height: 6rem;
+  height: 80px;
   background-color: #393e46;
-  border-radius: 0.4rem;
+  border-radius: 7px;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
 
@@ -32,9 +32,9 @@ const Options = styled.div`
   }
 `;
 const Typography = styled.h2`
-  font-size: 2.4rem;
+  font-size: 35px;
   font-weight: 500;
-  line-height: 1.6rem;
+  line-height: normal;
   color: ${(props) => props.theme.colors.highEmphasis};
 `;
 
@@ -73,17 +73,17 @@ const MainPopup = ({ open, setopen }) => {
             display: "flex",
             flexDirection: "column",
             width: "100%",
-            marginTop: "4rem",
+            marginTop: "25px",
           }}
         >
           {optionsList.map((item, i) => (
             <>
-              <Options style={{ marginBottom: "1.2rem" }}>{item.name}</Options>
+              <Options style={{ marginBottom: "15px" }}>{item.name}</Options>
             </>
           ))}
         </div>
 
-        <div style={{ marginTop: "3.4rem" }}>
+        <div style={{ marginTop: "2px" }}>
           <SubTypography>Created by Aniket</SubTypography>
         </div>
       </ParentContainer>

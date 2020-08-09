@@ -12,7 +12,7 @@ export default createGlobalStyle`
         }
 
         html{
-            font-size: 62.5%;
+            // font-size: 62.5%;
             box-sizing: border-box;
             --color-main: ${(props) => props.theme.colors.main};
             --color-secondary: ${(props) => props.theme.colors.secondary};
@@ -26,17 +26,17 @@ export default createGlobalStyle`
             --color-boxGradient: ${(props) => props.theme.colors.boxGradient};
 
          
-            @media ${(props) => props.theme.MediaQueries.large} {
-                   font-size: 57.5%;
-             }
+//             @media ${(props) => props.theme.MediaQueries.large} {
+//                    font-size: 57.5%;
+//              }
      
-             @media ${(props) => props.theme.MediaQueries.small} {
-                  font-size: 50%;
-              }
+//              @media ${(props) => props.theme.MediaQueries.small} {
+//                   font-size: 50%;
+//               }
 
-   @media ${(props) => props.theme.MediaQueries.largest} {
-                 font-size: 60%;
-            }
+//    @media ${(props) => props.theme.MediaQueries.largest} {
+//                  font-size: 60%;
+//             }
 
              scroll-behavior:smooth 
         }
