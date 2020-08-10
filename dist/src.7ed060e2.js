@@ -36626,7 +36626,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -36636,8 +36636,30 @@ var _reactSpring = require("react-spring");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject4() {
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n  font-size: 1.2rem;\n  font-weight: 500;\n  line-height: 1.6rem;\n  color: ", ";\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 35px;\n  font-weight: 500;\n  line-height: normal;\n  color: ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36647,7 +36669,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 35px;\n  font-weight: 500;\n  line-height: normal;\n  color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 80px;\n  background-color: #393e46;\n  border-radius: 7px;\n  cursor: pointer;\n  transition: 0.2s all ease-in-out;\n\n  &:active {\n    transform: scale(0.96);\n    box-shadow: inset 0 0 20px 4px #d65a311a;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36657,7 +36679,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 80px;\n  background-color: #393e46;\n  border-radius: 7px;\n  cursor: pointer;\n  transition: 0.2s all ease-in-out;\n\n  &:active {\n    transform: scale(0.96);\n    box-shadow: inset 0 0 20px 4px #d65a311a;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36667,7 +36689,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 460px;\n  height: 450px;\n  background-color: ", ";\n  position: absolute;\n  bottom: 170px;\n  right: 70px;\n  border-radius: 15px;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 20px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 460px;\n  height: 450px;\n  background-color: ", ";\n  position: absolute;\n  bottom: 170px;\n  right: 70px;\n  border-radius: 15px;\n  box-sizing: border-box;\n  padding: 20px;\n  overflow: hidden;\n  transition: 0.2s all ease-in-out;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36682,13 +36704,15 @@ var ParentContainer = _styledComponents.default.div(_templateObject(), function 
   return props.theme.colors.base;
 });
 
-var Options = _styledComponents.default.div(_templateObject2());
+var Wrapper = _styledComponents.default.div(_templateObject2());
 
-var Typography = _styledComponents.default.h2(_templateObject3(), function (props) {
+var Options = _styledComponents.default.div(_templateObject3());
+
+var Typography = _styledComponents.default.h2(_templateObject4(), function (props) {
   return props.theme.colors.highEmphasis;
 });
 
-var SubTypography = _styledComponents.default.h2(_templateObject4(), function (props) {
+var SubTypography = _styledComponents.default.h2(_templateObject5(), function (props) {
   return props.theme.colors.mediumEmphasis;
 });
 
@@ -36703,12 +36727,20 @@ var optionsList = [{
 var MainPopup = function MainPopup(_ref) {
   var open = _ref.open,
       setopen = _ref.setopen;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      slide = _useState2[0],
+      setSlide = _useState2[1];
+
   return _react.default.createElement(_reactTransitionGroup.CSSTransition, {
     in: open,
     timeout: 100,
     classNames: "date-picker",
     unmountOnExit: true
-  }, _react.default.createElement(ParentContainer, null, _react.default.createElement("div", null, _react.default.createElement(Typography, null, "Send Feedback")), _react.default.createElement("div", {
+  }, _react.default.createElement(ParentContainer, null, _react.default.createElement(Wrapper, {
+    className: slide ? "slideLeft" : "normalState"
+  }, _react.default.createElement("div", null, _react.default.createElement(Typography, null, "Send Feedback")), _react.default.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
@@ -36717,15 +36749,25 @@ var MainPopup = function MainPopup(_ref) {
     }
   }, optionsList.map(function (item, i) {
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Options, {
+      onClick: function onClick() {
+        return setSlide(true);
+      },
       style: {
         marginBottom: "15px"
       }
     }, item.name));
-  })), _react.default.createElement("div", {
+  }), _react.default.createElement("div", {
+    className: slide ? "secondSlideElementShow" : "secondSlideElementHide"
+  }, _react.default.createElement("h2", {
+    style: {
+      fontSize: "30px",
+      color: "red"
+    }
+  }, "asdasdasdasdasd"))), _react.default.createElement("div", {
     style: {
       marginTop: "2px"
     }
-  }, _react.default.createElement(SubTypography, null, "Created by Aniket"))));
+  }, _react.default.createElement(SubTypography, null, "Created by Aniket")))));
 };
 
 var _default = MainPopup;

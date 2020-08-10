@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { useSpring, animated } from "react-spring";
@@ -12,10 +12,15 @@ const ParentContainer = styled.div`
   right: 70px;
   border-radius: 15px;
   box-sizing: border-box;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+`;
+
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 `;
 
 const Options = styled.div`
@@ -56,7 +61,10 @@ const optionsList = [
     name: "asd",
   },
 ];
+
 const MainPopup = ({ open, setopen }) => {
+  const [slide, setSlide] = useState(false);
+
   return (
     <CSSTransition
       in={open}
@@ -65,27 +73,48 @@ const MainPopup = ({ open, setopen }) => {
       unmountOnExit
     >
       <ParentContainer>
-        <div>
-          <Typography>Send Feedback</Typography>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "100%",
-            marginTop: "25px",
-          }}
-        >
-          {optionsList.map((item, i) => (
-            <>
-              <Options style={{ marginBottom: "15px" }}>{item.name}</Options>
-            </>
-          ))}
-        </div>
+        <Wrapper className={slide ? "slideLeft" : "normalState"}>
+          <div>
+            <Typography>Send Feedback</Typography>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100%",
+              marginTop: "25px",
+            }}
+          >
+            {optionsList.map((item, i) => (
+              <>
+                <Options
+                  onClick={() => setSlide(true)}
+                  style={{ marginBottom: "15px" }}
+                >
+                  {item.name}
+                </Options>
+              </>
+            ))}
+            <div
+              className={
+                slide ? "secondSlideElementShow" : "secondSlideElementHide"
+              }
+            >
+              <h2
+                style={{
+                  fontSize: "30px",
+                  color: "red",
+                }}
+              >
+                asdasdasdasdasd
+              </h2>
+            </div>
+          </div>
 
-        <div style={{ marginTop: "2px" }}>
-          <SubTypography>Created by Aniket</SubTypography>
-        </div>
+          <div style={{ marginTop: "2px" }}>
+            <SubTypography>Created by Aniket</SubTypography>
+          </div>
+        </Wrapper>
       </ParentContainer>
     </CSSTransition>
   );
