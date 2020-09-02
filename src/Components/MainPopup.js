@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
 import { useSpring, animated } from "react-spring";
+import CustomSvg from "./CustomSvg";
 
 const ParentContainer = styled.div`
   width: 460px;
   height: 450px;
   background-color: ${(props) => props.theme.colors.base};
   position: absolute;
-  bottom: 170px;
-  right: 70px;
   border-radius: 15px;
   box-sizing: border-box;
   padding: 20px;
   overflow: hidden;
   transition: 0.2s all ease-in-out;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Wrapper = styled.div`
@@ -30,6 +32,8 @@ const Options = styled.div`
   border-radius: 7px;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
+  display: flex;
+  align-items: center;
 
   &:active {
     transform: scale(0.96);
@@ -52,13 +56,16 @@ const SubTypography = styled.h2`
 
 const optionsList = [
   {
-    name: "asd",
+    name: "Idea",
+    type: "idea",
   },
   {
-    name: "asd",
+    name: "Issue",
+    type: "issue",
   },
   {
-    name: "asd",
+    name: "Other",
+    type: "message",
   },
 ];
 
@@ -91,7 +98,18 @@ const MainPopup = ({ open, setopen }) => {
                   onClick={() => setSlide(true)}
                   style={{ marginBottom: "15px" }}
                 >
-                  {item.name}
+                  <div style={{ display: "flex", marginLeft: "10px" }}>
+                    <CustomSvg type={item.type} wudth="60px" height="60px" />
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "24px",
+                      marginLeft: "20px",
+                      color: "#999999",
+                    }}
+                  >
+                    {item.name}
+                  </div>
                 </Options>
               </>
             ))}
@@ -105,13 +123,11 @@ const MainPopup = ({ open, setopen }) => {
                   fontSize: "30px",
                   color: "red",
                 }}
-              >
-                asdasdasdasdasd
-              </h2>
+              ></h2>
             </div>
           </div>
 
-          <div style={{ marginTop: "2px" }}>
+          <div style={{ marginTop: "15px" }}>
             <SubTypography>Created by Aniket</SubTypography>
           </div>
         </Wrapper>

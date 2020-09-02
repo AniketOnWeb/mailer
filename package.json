@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "App.js",
   "scripts": {
-    "dev": "parcel Public/index.html",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
@@ -35,7 +37,8 @@
     "react-dom": "^16.13.1",
     "react-spring": "^8.0.27",
     "react-transition-group": "^4.4.1",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "react-scripts": "^3.3.0"
   },
   "browserslist": [
     "last 2 Chrome versions",

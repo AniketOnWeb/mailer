@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { App } from "./App";
 import { ThemeProvider } from "styled-components";
-import "./index.css";
+// import "./index.css";
 
 //
 import theme from "./Utils/theme";
